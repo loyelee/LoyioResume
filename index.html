@@ -23,6 +23,9 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
 
+  <!-- html5 dplayer -->
+  <link href="css/DPlayer.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -56,9 +59,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">AWARDS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="alert('You Click Success!!!')">CLICK ME</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="zh/">中文</a>
@@ -193,9 +193,11 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
         <h2 class="mb-5">Interests</h2>
-        <p>Write some program, and play some games
-        </p>
+        <p>Write some program, and play some games</p>
         <p class="mb-0">On the other side, I'm a Apple fans, really appreciate Apple's products</p>
+        <p class="mb-0">I'm also make some tutorial videos to share with others.</p>
+        <div id="dplayer"></div>
+
       </div>
     </section>
 
@@ -238,6 +240,42 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <script type="text/javascript" src="js/DPlayer.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    new DPlayer({
+    container: document.getElementById('dplayer'),
+    autoplay: false,
+    theme: '#FADFA3',
+    loop: false,
+    lang: 'zh-cn',
+    screenshot: true,
+    hotkey: true,
+    preload: 'auto',
+    logo: 'img/profile.jpg',
+    volume: 0.7,
+    mutex: true,
+    video: {
+        url: 'videos/TutorialVideo.mp4',
+        pic: 'img/maxpost.jpg',
+        thumbnails: 'img/maxpost.jpg',
+        type: 'auto'
+    },
+    subtitle: {
+        url: '',
+        type: '',
+        fontSize: '25px',
+        bottom: '10%',
+        color: '#b7daff'
+    },
+    contextmenu: [
+        {
+            text: 'loyio.me版权所有',
+            link: 'https://n.loyio.com'
+        }
+    ]
+});
 
 </body>
 
