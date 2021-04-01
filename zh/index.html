@@ -23,6 +23,9 @@
   <!-- Custom styles for this template -->
   <link href="../css/resume.min.css" rel="stylesheet">
 
+  <!-- html5 dplayer -->
+  <link href="css/DPlayer.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -56,9 +59,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">获奖经历</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" onclick="alert('点击成功!!!')">点击事件</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/LoyioResume">English</a>
@@ -212,6 +212,10 @@
         <h2 class="mb-5">个人兴趣</h2>
         <p>写写代码，玩玩游戏</p>
         <p class="mb-0">另一方面，是一个果粉，喜欢苹果的产品</p>
+        <p class="mb-5">我也做过一些教程视频.</p>
+        <div class="w-50">
+          <div id="dplayer"></div>
+        </div>
       </div>
     </section>
 
@@ -254,6 +258,43 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/resume.min.js"></script>
+
+  <script type="text/javascript" src="js/DPlayer.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    new DPlayer({
+    container: document.getElementById('dplayer'),
+    autoplay: false,
+    theme: '#FADFA3',
+    loop: false,
+    lang: 'zh-cn',
+    screenshot: true,
+    hotkey: true,
+    preload: 'auto',
+    logo: 'img/profile.jpg',
+    volume: 0.7,
+    mutex: true,
+    video: {
+        url: '../videos/TutorialVideo.mp4',
+        pic: '../img/maxpost.jpg',
+        thumbnails: '../img/maxpost.jpg',
+        type: 'auto'
+    },
+    subtitle: {
+        url: '',
+        type: '',
+        fontSize: '25px',
+        bottom: '10%',
+        color: '#b7daff'
+    },
+    contextmenu: [
+        {
+            text: 'loyio.me版权所有',
+            link: 'https://n.loyio.com'
+        }
+    ]
+  });
+  </script>
 
 </body>
 
